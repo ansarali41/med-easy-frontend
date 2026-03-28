@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        background-color: #020617;
+        color: #f8fafc;
+    }
+}
+
+/* Subtle dot grid for dark pages */
+.bg-grid {
+    background-image: radial-gradient(circle, #1e293b 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+@keyframes toast-slide-in {
+    from {
+        transform: translateX(calc(100% + 1rem));
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast-slide-in {
+    animation: toast-slide-in 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
