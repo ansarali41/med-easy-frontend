@@ -1,17 +1,17 @@
 services:
-  - name: med-easy-frontend
-    type: web
-    plan: free
-    runtime: image
-    image:
-      url: ghcr.io/YOUR_GITHUB_USERNAME/med-easy-frontend:latest
-    healthCheckPath: /
-    envVars:
-      - key: NODE_ENV
-        value: production
-      - key: PORT
-        value: 4000
-      - key: NEXT_PUBLIC_SUPABASE_URL
-        sync: false
-      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
-        sync: false
+    - name: med-easy-frontend
+      type: web
+      plan: free
+      runtime: image
+      image:
+          url: ghcr.io/ansarali41/med-easy-frontend:latest
+      healthCheckPath: /
+      envVars:
+          - key: NODE_ENV
+            value: production
+          - key: PORT
+            value: 4000
+          - key: NEXT_PUBLIC_SUPABASE_URL
+            sync: false
+          - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+            sync: false
