@@ -133,6 +133,7 @@ export default function OnboardPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          registrationKey: process.env.NEXT_PUBLIC_ONBOARD_SECRET_KEY ?? '',
           hospital: {
             name: hospital.name,
             type: hospital.type,
