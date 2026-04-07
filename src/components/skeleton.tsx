@@ -61,6 +61,184 @@ export function DashboardSkeleton() {
   );
 }
 
+export function AdminPageSkeleton() {
+  return (
+    <div className="min-h-screen bg-slate-950">
+      <header className="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800/60">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Skeleton className="w-9 h-9 rounded-xl" />
+            <Skeleton className="w-32 h-5" />
+          </div>
+          <div className="flex items-center gap-3">
+            <Skeleton className="w-24 h-4" />
+            <Skeleton className="w-20 h-8 rounded-lg" />
+          </div>
+        </div>
+      </header>
+      <main className="max-w-7xl mx-auto px-6 py-10">
+        <div className="flex items-center justify-between mb-8">
+          <div className="space-y-2">
+            <Skeleton className="w-32 h-7" />
+            <Skeleton className="w-40 h-4" />
+          </div>
+          <Skeleton className="w-40 h-10 rounded-lg" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <div key={i} className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
+              <div className="flex items-start justify-between">
+                <div className="space-y-2">
+                  <Skeleton className="w-36 h-5" />
+                  <Skeleton className="w-24 h-3" />
+                </div>
+                <Skeleton className="w-16 h-6 rounded-full" />
+              </div>
+              <div className="space-y-1.5">
+                <Skeleton className="w-28 h-3" />
+                <Skeleton className="w-32 h-3" />
+              </div>
+              <div className="flex gap-2 pt-1 border-t border-slate-800">
+                <Skeleton className="flex-1 h-9 rounded-lg" />
+                <Skeleton className="flex-1 h-9 rounded-lg" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
+
+export function BranchListSkeleton() {
+  return (
+    <div className="min-h-screen bg-slate-950">
+      <header className="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800/60">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Skeleton className="w-9 h-9 rounded-xl" />
+            <Skeleton className="w-24 h-5" />
+          </div>
+          <Skeleton className="w-24 h-8 rounded-lg" />
+        </div>
+      </header>
+      <main className="max-w-7xl mx-auto px-6 py-10">
+        <div className="flex items-center justify-between mb-8">
+          <div className="space-y-2">
+            <Skeleton className="w-28 h-7" />
+            <Skeleton className="w-20 h-4" />
+          </div>
+          <Skeleton className="w-28 h-10 rounded-lg" />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <div key={i} className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-3">
+              <div className="flex items-start justify-between">
+                <Skeleton className="w-32 h-5" />
+                <Skeleton className="w-12 h-5 rounded-full" />
+              </div>
+              <div className="space-y-1.5">
+                <Skeleton className="w-20 h-3" />
+                <Skeleton className="w-28 h-3" />
+              </div>
+              <div className="flex items-center justify-between pt-2 border-t border-slate-800">
+                <Skeleton className="w-10 h-3" />
+                <Skeleton className="w-20 h-3" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
+
+export function BranchDetailSkeleton() {
+  return (
+    <div className="min-h-screen bg-slate-950">
+      <header className="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800/60">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Skeleton className="w-9 h-9 rounded-xl" />
+            <Skeleton className="w-24 h-5" />
+          </div>
+          <Skeleton className="w-24 h-8 rounded-lg" />
+        </div>
+      </header>
+      <main className="max-w-7xl mx-auto px-6 py-10">
+        <div className="mb-8 space-y-2">
+          <div className="flex items-center gap-3">
+            <Skeleton className="w-48 h-7" />
+            <Skeleton className="w-12 h-6 rounded-full" />
+            <Skeleton className="w-16 h-6 rounded-full" />
+          </div>
+          <Skeleton className="w-40 h-4" />
+        </div>
+        <div className="flex items-center gap-1 mb-6 border-b border-slate-800 pb-2">
+          <Skeleton className="w-24 h-8 rounded" />
+          <Skeleton className="w-28 h-8 rounded" />
+          <div className="ml-auto">
+            <Skeleton className="w-24 h-8 rounded-lg" />
+          </div>
+        </div>
+        <div className="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div key={i} className="flex items-center gap-4 px-5 py-4 border-b border-slate-800 last:border-0">
+              <Skeleton className="w-32 h-4" />
+              <Skeleton className="w-40 h-4" />
+              <Skeleton className="w-16 h-5 rounded-full ml-auto" />
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
+
+export function RolesPageSkeleton() {
+  return (
+    <div className="min-h-screen bg-slate-950">
+      <header className="sticky top-0 z-40 bg-slate-900/90 backdrop-blur-md border-b border-slate-800/60">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Skeleton className="w-9 h-9 rounded-xl" />
+            <Skeleton className="w-24 h-5" />
+          </div>
+          <Skeleton className="w-24 h-8 rounded-lg" />
+        </div>
+      </header>
+      <main className="max-w-7xl mx-auto px-6 py-10">
+        <div className="flex items-center justify-between mb-8">
+          <div className="space-y-2">
+            <Skeleton className="w-20 h-7" />
+            <Skeleton className="w-64 h-4" />
+          </div>
+          <Skeleton className="w-28 h-10 rounded-lg" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+          {Array.from({ length: 3 }).map((_, i) => (
+            <div key={i} className="bg-slate-900 border border-slate-800 rounded-xl p-5 space-y-4">
+              <div className="space-y-1.5">
+                <Skeleton className="w-28 h-5" />
+                <Skeleton className="w-40 h-3" />
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                <Skeleton className="w-24 h-5 rounded-full" />
+                <Skeleton className="w-20 h-5 rounded-full" />
+                <Skeleton className="w-28 h-5 rounded-full" />
+              </div>
+              <div className="flex gap-2 pt-1 border-t border-slate-800">
+                <Skeleton className="flex-1 h-9 rounded-lg" />
+                <Skeleton className="flex-1 h-9 rounded-lg" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
+  );
+}
+
 export function ProfileSkeleton() {
   return (
     <div className="min-h-screen bg-slate-950">

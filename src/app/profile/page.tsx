@@ -88,7 +88,7 @@ export default function ProfilePage() {
           <h1 className="text-xl font-bold text-white">{firstName} {lastName}</h1>
           <p className="text-slate-500 text-sm mt-1">{user?.email}</p>
           <span className="inline-block mt-2 text-xs font-medium text-teal-400 bg-teal-400/10 border border-teal-400/20 px-3 py-1 rounded-full">
-            Hospital Admin
+            {user?.user_metadata?.role === 'super_admin' ? 'Super Admin' : user?.user_metadata?.role === 'hospital_admin' ? 'Hospital Admin' : (user?.user_metadata?.role ?? 'Staff')}
           </span>
         </div>
 

@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import { createClient } from '@/lib/supabase';
 import { useToast } from '@/components/toaster';
 
@@ -96,12 +95,6 @@ export default function LoginPage() {
           </form>
         </div>
 
-        <p className="text-center text-sm text-slate-600 mt-6">
-          New hospital?{' '}
-          <Link href="/onboard" className="text-teal-400 hover:text-teal-300 font-medium transition-colors">
-            Register here
-          </Link>
-        </p>
       </div>
     </div>
   );
